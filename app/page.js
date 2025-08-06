@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 import { useState } from "react";
 import { IoIosFootball, IoMdNotifications } from "react-icons/io";
-
+import { MdExitToApp } from "react-icons/md";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="fixed inset-y-0 left-0 w-64 bg-cordes-dark shadow-xl z-50 dark:bg-gray-900">
         <div className="flex items-center justify-center h-16 bg-cordes-blue dark:bg-gray-800">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center dark:bg-gray-700">
+            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
               <IoIosFootball />
             </div>
             <span className="text-white text-xl font-bold dark:text-gray-200">
@@ -22,7 +23,7 @@ export default function Home() {
         <nav className="mt-8 px-4">
           <div className="space-y-2">
             <a
-              href="#"
+              href="/"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <i className="fas fa-home mr-3 text-cordes-accent group-hover:text-white dark:text-cordes-accent"></i>
@@ -40,7 +41,7 @@ export default function Home() {
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <i className="fas fa-chart-bar mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
-              Analytics
+              Leaderboard
             </a>
             <a
               href="#"
@@ -68,20 +69,25 @@ export default function Home() {
 
         <div className="absolute bottom-4 left-4 right-4">
           <div className="bg-gray-800 rounded-lg p-4 dark:bg-gray-700">
-            <div className="flex items-center space-x-3">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
-                alt="Admin"
-                className="w-10 h-10 rounded-full"
-              />
-              <div>
-                <p className="text-white text-sm font-medium dark:text-gray-200">
-                  John Admin
-                </p>
-                <p className="text-gray-400 text-xs dark:text-gray-400">
-                  Administrator
-                </p>
+            <div className="flex items-center justify-between space-x-3">
+              <div className="flex items-center space-x-3">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
+                  alt="Admin"
+                  className="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <p className="text-white text-sm font-medium dark:text-gray-200">
+                    John Admin
+                  </p>
+                  <p className="text-gray-400 text-xs dark:text-gray-400">
+                    Administrator
+                  </p>
+                </div>
               </div>
+              <button className="bg-transparent text-white p-2 rounded-full hover:bg-gray-600">
+                <MdExitToApp size={24} />
+              </button>
             </div>
           </div>
         </div>
