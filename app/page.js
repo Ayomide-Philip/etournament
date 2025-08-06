@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
+import { IoIosFootball, IoMdNotifications } from "react-icons/io";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  const handleToggleDarkMode = () => setDarkMode((prev) => !prev);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -11,10 +11,10 @@ export default function Home() {
         <div className="flex items-center justify-center h-16 bg-cordes-blue dark:bg-gray-800">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center dark:bg-gray-700">
-              <i className="fas fa-cube text-cordes-blue text-lg dark:text-cordes-accent"></i>
+              <IoIosFootball />
             </div>
             <span className="text-white text-xl font-bold dark:text-gray-200">
-              Cordes
+              ETournaments
             </span>
           </div>
         </div>
@@ -110,24 +110,12 @@ export default function Home() {
                 </div>
                 <div className="relative">
                   <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
-                    <i className="fas fa-bell text-xl"></i>
+                    <IoMdNotifications />
                     <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                       3
                     </span>
                   </button>
                 </div>
-                {/* Dark mode toggle button */}
-                <button
-                  onClick={handleToggleDarkMode}
-                  className="p-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  aria-label="Toggle dark mode"
-                >
-                  {darkMode ? (
-                    <i className="fas fa-moon"></i>
-                  ) : (
-                    <i className="fas fa-sun"></i>
-                  )}
-                </button>
               </div>
             </div>
           </div>
