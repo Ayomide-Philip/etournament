@@ -20,7 +20,7 @@ export default function AdminPannel({ children }) {
           isSidebarOpen ? "block" : "hidden"
         } md:block md:w-64 transition-all duration-300`}
       >
-        <div className="flex items-center justify-between h-16 bg-cordes-blue dark:bg-gray-800 px-4">
+        <div className="flex items-center justify-between h-24 sm:h-20 bg-cordes-blue dark:bg-gray-800 px-4">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
               <IoIosFootball />
@@ -28,13 +28,15 @@ export default function AdminPannel({ children }) {
             <span className="text-white text-xl font-bold dark:text-gray-200">
               ETournaments
             </span>
-            <button
-              onClick={toggleSidebar}
-              className="text-gray-800 dark:text-white text-2xl focus:outline-none"
-              aria-label="Toggle Sidebar"
-            >
-              {isSidebarOpen ? "✕" : "☰"}
-            </button>
+            <div className="flex items-center space-x-4 md:hidden">
+              <button
+                onClick={toggleSidebar}
+                className="text-gray-800 dark:text-white text-2xl focus:outline-none"
+                aria-label="Toggle Sidebar"
+              >
+                {isSidebarOpen ? "✕" : "☰"}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -113,24 +115,19 @@ export default function AdminPannel({ children }) {
         </div>
       </div>
 
-      {/* Main Content */}
       <div
         className={`${
           isSidebarOpen ? "ml-0" : "sm:ml-64"
         } transition-all duration-300`}
       >
-        {/* Header */}
         <header className="bg-white shadow-sm border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-          {/* Header Inner */}
           <div className="px-4 md:px-6 py-4">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              {/* Mobile & Desktop Title */}
               <div className="flex items-center justify-between w-full md:w-auto">
                 <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                   Dashboard Overview
                 </h1>
 
-                {/* Mobile Icons: notification + hamburger */}
                 <div className="flex items-center space-x-4 md:hidden">
                   <button className="relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                     <IoMdNotifications size={22} />
@@ -140,15 +137,16 @@ export default function AdminPannel({ children }) {
                   </button>
                   <button
                     onClick={toggleSidebar}
-                    className="text-gray-800 dark:text-white text-2xl focus:outline-none"
+                    className={`text-gray-800  text-2xl focus:outline-none ${
+                      isSidebarOpen ? "text-gray-900 " : "dark:text-white"
+                    } rounded-lg p-2 `}
                     aria-label="Toggle Sidebar"
                   >
-                    {isSidebarOpen ? null : "☰"}
+                    {isSidebarOpen ? "✕" : "☰"}
                   </button>
                 </div>
               </div>
 
-              {/* Search & Notifications (Desktop only) */}
               <div className="hidden md:flex items-center space-x-4 mt-4 md:mt-0">
                 <div className="relative">
                   <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-300"></i>
@@ -171,7 +169,6 @@ export default function AdminPannel({ children }) {
           </div>
         </header>
 
-        {/* Main Content Area */}
         {children}
       </div>
     </div>
