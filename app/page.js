@@ -1,7 +1,6 @@
 import { TbTournament } from "react-icons/tb";
 import { FaUser } from "react-icons/fa";
-import { RiFootballFill } from "react-icons/ri";
-import { Trophy } from "lucide";
+import { Trophy, User, Volleyball } from "lucide-react";
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
               <p className="text-3xl font-bold text-gray-900 mt-2">15,847</p>
             </div>
             <div className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center">
-              <FaUser />
+              <User />
             </div>
           </div>
         </div>
@@ -38,7 +37,7 @@ export default function Home() {
               <p className="text-3xl font-bold text-gray-900 mt-2">2,847</p>
             </div>
             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
-              <RiFootballFill />
+              <Volleyball />
             </div>
           </div>
         </div>
