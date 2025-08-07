@@ -1,8 +1,5 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { IoIosFootball, IoMdNotifications } from "react-icons/io";
-import { MdExitToApp } from "react-icons/md";
 import AdminPannel from "./componet/adminPannel";
 const geistSans = Geist({
   variable: "--font-geist-sans",
