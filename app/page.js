@@ -1,6 +1,7 @@
 import { TbTournament } from "react-icons/tb";
 import { FaUser } from "react-icons/fa";
 import { RiFootballFill } from "react-icons/ri";
+import { Trophy } from "lucide";
 
 export default function Home() {
   return (
@@ -48,8 +49,8 @@ export default function Home() {
               <p className="text-sm font-medium text-gray-600">Ongoing</p>
               <p className="text-3xl font-bold text-gray-900 mt-2">5</p>
             </div>
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-              <i className="fas fa-box text-purple-600 text-xl"></i>
+            <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+              <Trophy />
             </div>
           </div>
         </div>
