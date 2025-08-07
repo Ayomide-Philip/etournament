@@ -1,3 +1,5 @@
+import { Minus, RemoveFormattingIcon } from "lucide-react";
+
 const userInfo = [
   {
     id: 1,
@@ -5,8 +7,7 @@ const userInfo = [
     teamName: "Fc Barcelona",
     teamRating: 3153,
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image:
-      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    image: "/testing.jpg",
   },
   {
     id: 2,
@@ -14,8 +15,7 @@ const userInfo = [
     teamName: "Fc Barcelona",
     teamRating: 3153,
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image:
-      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    image: "/testing.jpg",
   },
   {
     id: 3,
@@ -23,8 +23,7 @@ const userInfo = [
     teamName: "Fc Barcelona",
     teamRating: 3153,
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image:
-      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    image: "/testing.jpg",
   },
 ];
 export default function Page() {
@@ -67,6 +66,11 @@ export default function Page() {
                     <div className="absolute bottom-0 left-0 bg-blue-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-blue-600 transition duration-500 ease-in-out">
                       Squad
                     </div>
+                    <a href="#">
+                      <div className="text-sm absolute top-0 right-0 bg-blue-600 px-4 text-white rounded-full h-8 w-8 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-blue-600 transition duration-500 ease-in-out">
+                        <Minus />
+                      </div>
+                    </a>
                   </div>
                   <div className="px-3 py-2">
                     <h1 className="font-semibold text-lg text-black dark:text-black">
