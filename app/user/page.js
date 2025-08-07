@@ -1,4 +1,7 @@
-import { Minus, RemoveFormattingIcon } from "lucide-react";
+"use client";
+import { Minus } from "lucide-react";
+import ImageViewer from "../componet/imageVoewer";
+import { useState } from "react";
 
 const userInfo = [
   {
@@ -27,6 +30,8 @@ const userInfo = [
   },
 ];
 export default function Page() {
+  const [viewingSquad, setViewingSquad] = useState(false);
+  const [viewImage, setImage] = useState("");
   return (
     <main className="p-6  dark:bg-gray-900 dark:text-gray-100">
       <div className="flex flex-col md:flex-row items-center justify-between mb-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md">
@@ -54,7 +59,13 @@ export default function Page() {
                   className="rounded overflow-hidden shadow-lg bg-white dark:bg-white"
                 >
                   <div className="relative">
-                    <a href="#">
+                    <a
+                      className="cursor-pointer"
+                      onClick={() => {
+                        setViewingSquad(true);
+                        setImage(image);
+                      }}
+                    >
                       <img
                         className="w-full"
                         src={image}
@@ -89,6 +100,9 @@ export default function Page() {
           )}
         </div>
       </div>
+      {viewingSquad ? (
+        <ImageViewer setViewingSquad={setViewingSquad} viewImage={viewImage} />
+      ) : null}
     </main>
   );
 }
