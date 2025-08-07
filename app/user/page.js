@@ -3,6 +3,7 @@
 import { Minus } from "lucide-react";
 import ImageViewer from "../componet/imageVoewer";
 import { useState } from "react";
+import AddNewUser from "../componet/addNewuserForm";
 
 const userInfo = [
   {
@@ -43,7 +44,7 @@ export default function Page() {
         </div>
         <div className="flex items-center space-x-3">
           <h1 className="text-4xl font-semibold text-black dark:text-white">
-            50
+            {userInfo.length}
           </h1>
           <span className="text-sm text-gray-500 dark:text-gray-400">
             users
@@ -70,7 +71,7 @@ export default function Page() {
                       <img
                         className="w-full"
                         src={image}
-                        alt="Sunset in the mountains"
+                        alt={`${username} - ${teamName}`}
                       />
                       <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
                     </a>
@@ -104,6 +105,13 @@ export default function Page() {
       {viewingSquad ? (
         <ImageViewer setViewingSquad={setViewingSquad} viewImage={viewImage} />
       ) : null}
+      <button
+        className="fixed bottom-8 right-6 h-15 w-15 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition-all"
+        aria-label="Add New User"
+      >
+        +
+      </button>
+      <AddNewUser />
     </main>
   );
 }
