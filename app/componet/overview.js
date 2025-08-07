@@ -43,7 +43,7 @@ export default function HomeOverview() {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="goals" fill="#82ca9d" />
+              <Bar dataKey="goals" fill="#213ba0ff" />
             </BarChart>
           </ResponsiveContainer>
         </div>
