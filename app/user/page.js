@@ -1,3 +1,32 @@
+const userInfo = [
+  {
+    id: 1,
+    username: "John Doe",
+    teamName: "Fc Barcelona",
+    teamRating: 3153,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image:
+      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+  {
+    id: 2,
+    username: "John Doe",
+    teamName: "Fc Barcelona",
+    teamRating: 3153,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image:
+      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+  {
+    id: 3,
+    username: "John Doe",
+    teamName: "Fc Barcelona",
+    teamRating: 3153,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image:
+      "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+];
 export default function Page() {
   return (
     <main className="p-6  dark:bg-gray-900 dark:text-gray-100">
@@ -8,12 +37,52 @@ export default function Page() {
           </h1>
         </div>
         <div className="flex items-center space-x-3">
-          <h1 className="text-4xl font-semibold text-blue-600 dark:text-blue-400">
+          <h1 className="text-4xl font-semibold text-black dark:text-white">
             50
           </h1>
           <span className="text-sm text-gray-500 dark:text-gray-400">
             users
           </span>
+        </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto p-5 sm:p-5 md:p-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+          {userInfo.map(
+            ({ id, username, teamRating, teamName, bio, image }) => {
+              return (
+                <div
+                  key={id}
+                  className="rounded overflow-hidden shadow-lg bg-white dark:bg-white"
+                >
+                  <div className="relative">
+                    <a href="#">
+                      <img
+                        className="w-full"
+                        src={image}
+                        alt="Sunset in the mountains"
+                      />
+                      <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                    </a>
+
+                    <div className="absolute bottom-0 left-0 bg-blue-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-blue-600 transition duration-500 ease-in-out">
+                      Squad
+                    </div>
+                  </div>
+                  <div className="px-3 py-2">
+                    <h1 className="font-semibold text-lg text-black dark:text-black">
+                      {`${username} : ${teamName}`}
+                    </h1>
+                    <p className="text-gray-800 text-sm">{bio}</p>
+                  </div>
+                  <div className="px-2 py-1 flex flex-row items-center">
+                    <span className="py-1 text-sm   text-black mr-1 flex flex-row items-center">
+                      <span className="ml-1">Team Rating : {teamRating}</span>
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
     </main>
