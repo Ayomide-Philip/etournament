@@ -57,7 +57,7 @@ export default function HomeOverview() {
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <img
-              src="https://i.ytimg.com/vi/08JoSCHV9VY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAC7M1K4hMJbmFQQFppnSNzsZAcRA"
+              src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
               alt="Product"
               className="w-12 h-12 rounded-lg"
             />
@@ -69,7 +69,7 @@ export default function HomeOverview() {
 
           <div className="flex items-center space-x-4">
             <img
-              src="https://i.ytimg.com/vi/08JoSCHV9VY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAC7M1K4hMJbmFQQFppnSNzsZAcRA"
+              src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
               alt="Product"
               className="w-12 h-12 rounded-lg"
             />
@@ -81,7 +81,7 @@ export default function HomeOverview() {
 
           <div className="flex items-center space-x-4">
             <img
-              src="https://i.ytimg.com/vi/08JoSCHV9VY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAC7M1K4hMJbmFQQFppnSNzsZAcRA"
+              src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
               alt="Product"
               className="w-12 h-12 rounded-lg"
             />
@@ -93,7 +93,7 @@ export default function HomeOverview() {
 
           <div className="flex items-center space-x-4">
             <img
-              src="https://i.ytimg.com/vi/08JoSCHV9VY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAC7M1K4hMJbmFQQFppnSNzsZAcRA"
+              src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
               alt="Product"
               className="w-12 h-12 rounded-lg"
             />
@@ -105,7 +105,7 @@ export default function HomeOverview() {
 
           <div className="flex items-center space-x-4">
             <img
-              src="https://i.ytimg.com/vi/08JoSCHV9VY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAC7M1K4hMJbmFQQFppnSNzsZAcRA"
+              src="https://cdn-icons-png.flaticon.com/512/17003/17003310.png"
               alt="Product"
               className="w-12 h-12 rounded-lg"
             />

@@ -4,6 +4,8 @@
 import { IoIosFootball, IoMdNotifications } from "react-icons/io";
 import { MdExitToApp } from "react-icons/md";
 import { useState } from "react";
+import { TbTournament } from "react-icons/tb";
+import { Gauge, Settings, Trophy, User, Volleyball } from "lucide-react";
 
 const darkMode = true;
 
@@ -47,42 +49,42 @@ export default function AdminPannel({ children }) {
               href="/"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-home mr-3 text-cordes-accent group-hover:text-white dark:text-cordes-accent"></i>
+              <Gauge className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Dashboard
             </a>
             <a
               href="#"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-users mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
+              <User className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Users
             </a>
             <a
               href="#"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-chart-bar mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
+              <Trophy className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Leaderboard
             </a>
             <a
               href="#"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-shopping-cart mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
+              <TbTournament className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Tournaments
             </a>
             <a
               href="#"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-box mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
+              <Volleyball className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Matches
             </a>
             <a
               href="#"
               className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              <i className="fas fa-cog mr-3 text-gray-400 group-hover:text-white dark:text-gray-300"></i>
+              <Settings className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
               Settings
             </a>
           </div>
