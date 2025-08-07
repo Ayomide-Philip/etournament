@@ -7,9 +7,8 @@ import { useState } from "react";
 import { TbTournament } from "react-icons/tb";
 import { Gauge, Settings, Table, Trophy, User, Volleyball } from "lucide-react";
 
-const darkMode = true;
 
-export default function AdminPannel({ children }) {
+export default function AdminPannel({ children, darkMode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -21,7 +20,7 @@ export default function AdminPannel({ children }) {
           isSidebarOpen ? "block" : "hidden"
         } md:block md:w-64 transition-all duration-300`}
       >
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between h-full border-r-1 border-white dark:border-gray-500">
           <div className="flex items-center justify-between h-24 p-8 sm:h-20 bg-cordes-blue dark:bg-gray-800 px-4">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
