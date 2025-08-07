@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { Minus } from "lucide-react";
 import ImageViewer from "../componet/imageVoewer";
