@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="p-6 dark:bg-gray-900 dark:text-gray-100">
+    <main className="p-6  dark:bg-gray-900 dark:text-gray-100">
       <HomeSummary />
       <HomeOverview />
     </main>

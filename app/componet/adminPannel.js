@@ -28,15 +28,14 @@ export default function AdminPannel({ children }) {
             <span className="text-white text-xl font-bold dark:text-gray-200">
               ETournaments
             </span>
+            <button
+              onClick={toggleSidebar}
+              className="text-gray-800 dark:text-white text-2xl focus:outline-none"
+              aria-label="Toggle Sidebar"
+            >
+              {isSidebarOpen ? "✕" : "☰"}
+            </button>
           </div>
-
-          {/* Hamburger Button (mobile only) */}
-          <button
-            onClick={toggleSidebar}
-            className="md:hidden text-black dark:text-white z-50"
-          >
-            {isSidebarOpen ? "X" : "☰"}
-          </button>
         </div>
 
         {/* Sidebar Navigation */}
@@ -114,6 +113,7 @@ export default function AdminPannel({ children }) {
         </div>
       </div>
 
+      {/* Main Content */}
       <div
         className={`${
           isSidebarOpen ? "ml-0" : "sm:ml-64"
@@ -121,17 +121,35 @@ export default function AdminPannel({ children }) {
       >
         {/* Header */}
         <header className="bg-white shadow-sm border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-          <div className="px-6 py-4">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div>
+          {/* Header Inner */}
+          <div className="px-4 md:px-6 py-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              {/* Mobile & Desktop Title */}
+              <div className="flex items-center justify-between w-full md:w-auto">
                 <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                   Dashboard Overview
                 </h1>
-                <p className="text-gray-600 text-sm mt-1 dark:text-gray-400">
-                  Welcome back, here's what's happening today
-                </p>
+
+                {/* Mobile Icons: notification + hamburger */}
+                <div className="flex items-center space-x-4 md:hidden">
+                  <button className="relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <IoMdNotifications size={22} />
+                    <span className="absolute -top-1 -right-2 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+                      3
+                    </span>
+                  </button>
+                  <button
+                    onClick={toggleSidebar}
+                    className="text-gray-800 dark:text-white text-2xl focus:outline-none"
+                    aria-label="Toggle Sidebar"
+                  >
+                    {isSidebarOpen ? null : "☰"}
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center space-x-4 mt-4 md:mt-0">
+
+              {/* Search & Notifications (Desktop only) */}
+              <div className="hidden md:flex items-center space-x-4 mt-4 md:mt-0">
                 <div className="relative">
                   <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-300"></i>
                   <input
