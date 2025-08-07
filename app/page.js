@@ -1,15 +1,5 @@
 import HomeOverview from "./componet/overview";
 import HomeSummary from "./componet/summary";
-import {
-  Bar,
-  BarChart,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
 
 export default function Home() {
   return (

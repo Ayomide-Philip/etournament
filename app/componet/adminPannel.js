@@ -52,7 +52,7 @@ export default function AdminPannel({ children }) {
                 Dashboard
               </a>
               <a
-                href="#"
+                href="/user"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <User className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
