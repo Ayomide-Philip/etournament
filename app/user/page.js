@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { Minus } from "lucide-react";
-import ImageViewer from "../componet/imageVoewer";
+import ImageViewer from "../componet/imageViewer";
 import { useState } from "react";
 
 const userInfo = [
