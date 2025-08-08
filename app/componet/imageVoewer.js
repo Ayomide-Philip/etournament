@@ -13,7 +13,14 @@ export default function ImageViewer({ setViewingSquad, viewImage }) {
           aria-label="Close image viewer"
           onClick={() => setViewingSquad(false)}
         >
-          ✕
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              d="M6 6l12 12M6 18L18 6"
+            />
+          </svg>
         </button>
       </div>
     </div>

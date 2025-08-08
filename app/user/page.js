@@ -3,7 +3,6 @@
 import { Minus } from "lucide-react";
 import ImageViewer from "../componet/imageVoewer";
 import { useState } from "react";
-import AddNewUser from "../componet/addNewuserForm";
 
 const userInfo = [
   {
@@ -105,13 +104,14 @@ export default function Page() {
       {viewingSquad ? (
         <ImageViewer setViewingSquad={setViewingSquad} viewImage={viewImage} />
       ) : null}
-      <button
-        className="fixed bottom-8 right-6 h-15 w-15 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition-all"
-        aria-label="Add New User"
-      >
-        +
-      </button>
-      <AddNewUser />
+      <a href="/user/adduser">
+        <button
+          className="fixed bottom-8 right-6 h-15 w-15 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition-all"
+          aria-label="Add New User"
+        >
+          +
+        </button>
+      </a>
     </main>
   );
 }
