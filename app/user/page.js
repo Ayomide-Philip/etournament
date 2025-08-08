@@ -106,7 +106,7 @@ export default function Page() {
       ) : null}
       <a href="/user/adduser">
         <button
-          className="fixed bottom-8 right-6 h-15 w-15 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition-all"
+          className="fixed bottom-8 right-6 h-15 w-15 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition-all cursor-pointer"
           aria-label="Add New User"
         >
           +
