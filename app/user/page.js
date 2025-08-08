@@ -4,32 +4,6 @@ import { Minus } from "lucide-react";
 import ImageViewer from "../componet/imageViewer";
 import { useEffect, useState } from "react";
 
-const userInfo = [
-  {
-    id: 1,
-    username: "John Doe",
-    teamName: "Fc Barcelona",
-    teamRating: 3153,
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "/testing.jpg",
-  },
-  {
-    id: 2,
-    username: "John Doe",
-    teamName: "Fc Philip",
-    teamRating: 3178,
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "/testing.jpg",
-  },
-  {
-    id: 3,
-    username: "John Doe",
-    teamName: "Fc Barcelona",
-    teamRating: 3153,
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "/testing.jpg",
-  },
-];
 export default function Page() {
   const [viewingSquad, setViewingSquad] = useState(false);
   const [viewImage, setImage] = useState("");
