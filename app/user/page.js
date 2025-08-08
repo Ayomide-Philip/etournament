@@ -16,8 +16,8 @@ const userInfo = [
   {
     id: 2,
     username: "John Doe",
-    teamName: "Fc Barcelona",
-    teamRating: 3153,
+    teamName: "Fc Philip",
+    teamRating: 3178,
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image: "/testing.jpg",
   },
