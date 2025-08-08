@@ -86,13 +86,13 @@ export default function Page() {
                   </div>
                   <div className="px-3 py-2">
                     <h1 className="font-semibold text-lg text-black dark:text-black">
-                      {`${username} : ${teamName}`}
+                      {`${username}: ${teamName}`}
                     </h1>
                     <p className="text-gray-800 text-sm">{bio}</p>
                   </div>
                   <div className="px-2 py-1 flex flex-row items-center">
                     <span className="py-1 text-sm   text-black mr-1 flex flex-row items-center">
-                      <span className="ml-1">Team Rating : {teamRating}</span>
+                      <span className="ml-1">Team Rating: {teamRating}</span>
                     </span>
                   </div>
                 </div>

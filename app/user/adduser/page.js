@@ -62,6 +62,10 @@ export default function Page() {
               Image Preview
             </p>
             <div className="w-full h-48 bg-gradient-to-br from-blue-200 to-blue-200 rounded-2xl flex items-center justify-center text-gray-500 border-2 border-blue-400">
+              {/* <img
+                src="/testing.jpg"
+                className="w-full h-full rounded-2xl p-1"
+              /> */}
               <p>Image Preview will appear here</p>
             </div>
           </div>
