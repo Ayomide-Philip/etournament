@@ -68,10 +68,10 @@ export default function Page() {
         {userInformation.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
             {userInformation.map(
-              ({ id, username, teamRating, teamName, bio, image }) => {
+              ({ id, username, teamRating, teamName, bio, image }, idx) => {
                 return (
                   <div
-                    key={id}
+                    key={idx}
                     className="rounded overflow-hidden shadow-lg bg-white dark:bg-white"
                   >
                     <div className="relative">

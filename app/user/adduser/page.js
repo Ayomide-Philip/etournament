@@ -1,13 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const [username, setUsername] = useState("");
   const [teamName, setTeamName] = useState("");
   const [teamRating, setTeamRating] = useState();
   const [imageUrl, setImageUrl] = useState("");
+  const [bio, setBio] = useState("");
+
+  const [userInformation, setUserInformation] = useState([]);
+
+  useEffect(() => {
+    const userInfo = localStorage.getItem("userInfo");
+    if (userInfo == null) {
+      setUserInformation([]);
+    } else if (userInfo == undefined) {
+      setUserInformation([]);
+    } else {
+      setUserInformation(JSON.parse(userInfo));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("userInfo", JSON.stringify(userInformation));
+  }, [userInformation]);
+
   function getImageUrl(e) {
     if (e && e[0]) {
       const reader = new FileReader();
@@ -17,6 +35,32 @@ export default function Page() {
       reader.readAsDataURL(e[0]);
     }
   }
+  function getNewId() {
+    var id = 0;
+    if (userInformation.length > 0) {
+      id = userInformation[userInformation.length - 1].id + 1;
+    } else {
+      id = 1;
+    }
+    return id;
+  }
+
+  function AddNewuser(e) {
+    e.preventDefault();
+    const newUserInfo = {
+      id: getNewId(),
+      username: username,
+      teamName: teamName,
+      teamRating: teamRating,
+      bio: bio,
+      image: imageUrl,
+    };
+    console.log(newUserInfo);
+    setUserInformation((prev) => {
+      return [...prev, newUserInfo];
+    });
+    window.location.href = "/user";
+  }
 
   return (
     <div className="flex justify-center items-center min-h-screen p-5">
@@ -25,7 +69,7 @@ export default function Page() {
           Add a User Team
         </h2>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={AddNewuser}>
           <div>
             <label className="block text-gray-700 text-lg font-medium mb-2">
               Username:
@@ -38,6 +82,7 @@ export default function Page() {
               onChange={(e) => {
                 setUsername(e.target.value);
               }}
+              required
             />
           </div>
 
@@ -53,6 +98,7 @@ export default function Page() {
               onChange={(e) => {
                 setTeamName(e.target.value);
               }}
+              required
             />
           </div>
 
@@ -70,6 +116,7 @@ export default function Page() {
               onChange={(e) => {
                 setTeamRating(e.target.value);
               }}
+              required
             />
           </div>
 
@@ -85,6 +132,7 @@ export default function Page() {
               onChange={(e) => {
                 getImageUrl(e.target.files);
               }}
+              required
             />
           </div>
 
@@ -97,8 +145,9 @@ export default function Page() {
               rows={5}
               className="p-3 w-full border border-blue-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition ease-in-out resize-none"
               onChange={(e) => {
-                setTeamRating(e.target.value);
+                setBio(e.target.value);
               }}
+              required
             />
           </div>
 
