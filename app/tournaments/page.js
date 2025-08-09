@@ -1,3 +1,7 @@
 export default function Page() {
-  return <div>Tournaments</div>;
+  return (
+    <div>
+      <h1>Tournaments</h1>
+    </div>
+  );
 }
