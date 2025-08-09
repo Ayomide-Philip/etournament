@@ -65,7 +65,7 @@ export default function Page() {
   return (
     <div className="flex justify-center items-center min-h-screen p-5">
       <div className="w-full max-w-lg p-10 border border-gray-300 rounded-3xl shadow-xl bg-white">
-        <h2 className="text-3xl font-bold text-center text-blue-700 mb-8 tracking-wide">
+        <h2 className="text-2xl font-bold text-center text-blue-700 mb-8 tracking-wide">
           Add a User Team
         </h2>
 

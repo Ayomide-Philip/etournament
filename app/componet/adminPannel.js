@@ -7,7 +7,6 @@ import { useState } from "react";
 import { TbTournament } from "react-icons/tb";
 import { Gauge, Settings, Table, Trophy, User, Volleyball } from "lucide-react";
 
-
 export default function AdminPannel({ children, darkMode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -58,35 +57,35 @@ export default function AdminPannel({ children, darkMode }) {
                 Users
               </a>
               <a
-                href="#"
+                href="/leaderboard"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <Trophy className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
                 Leaderboard
               </a>
               <a
-                href="#"
+                href="/tournaments"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <TbTournament className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
                 Tournaments
               </a>
               <a
-                href="#"
+                href="/table"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <Table className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
                 Table
               </a>
               <a
-                href="#"
+                href="/matches"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <Volleyball className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
                 Matches
               </a>
               <a
-                href="#"
+                href="/settings"
                 className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               >
                 <Settings className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
