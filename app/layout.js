@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AdminPannel from "./componet/adminPannel";
+import DashboardLayout from "./componet/dashboardLayout";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 min-h-screen `}
       >
-        <AdminPannel darkMode={darkMode}>{children}</AdminPannel>
+        {/* <AdminPannel darkMode={darkMode}>{children}</AdminPannel> */}
+        <DashboardLayout />
+        {children}
       </body>
     </html>
   );
