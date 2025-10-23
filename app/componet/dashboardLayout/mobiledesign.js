@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
+import { navLink } from "./navLink";
 export default function MobileNavbar({ toggleSidebar, isSidebarOpen }) {
   return (
     <div
@@ -46,55 +47,18 @@ export default function MobileNavbar({ toggleSidebar, isSidebarOpen }) {
 
         <nav className="mt-4 px-4 flex-1">
           <div className="space-y-2 pb-10 sm:pb-20">
-            <Link
-              href="/"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <Gauge className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Dashboard
-            </Link>
-            <Link
-              href="/user"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <User className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Users
-            </Link>
-            <Link
-              href="/leaderboard"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <Trophy className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Leaderboard
-            </Link>
-            <Link
-              href="/tournaments"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <TbTournament className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Tournaments
-            </Link>
-            <Link
-              href="/table"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <Table className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Table
-            </Link>
-            <Link
-              href="/matches"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <Volleyball className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Matches
-            </Link>
-            <Link
-              href="/settings"
-              className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-            >
-              <Settings className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
-              Settings
-            </Link>
+            {navLink.map(({ name, path, icon: Icon }, idx) => {
+              return (
+                <Link
+                  key={idx}
+                  href={path}
+                  className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                >
+                  <Icon className="mr-3 text-gray-400 group-hover:text-white dark:text-gray-300" />
+                  {name}
+                </Link>
+              );
+            })}
           </div>
         </nav>
 
