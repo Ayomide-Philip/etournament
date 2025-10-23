@@ -1,11 +1,7 @@
-import HomeOverview from "./componet/overview";
-import HomeSummary from "./componet/summary";
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="p-6  dark:bg-gray-900 dark:text-gray-100">
-      <HomeSummary />
-      <HomeOverview />
-    </main>
+    <>
+      <h1 className="text-white">Hello World</h1>
+    </>
   );
-} 
+}
