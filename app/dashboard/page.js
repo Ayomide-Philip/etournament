@@ -1,5 +1,5 @@
-import HomeOverview from "../componet/overview";
-import HomeSummary from "../componet/summary";
+import HomeOverview from "../../componet/overview";
+import HomeSummary from "../../componet/summary";
 
 export default function Home() {
   return (
