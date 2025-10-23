@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { Bell, Menu } from "lucide-react";
+import { Bell, LogOut, Menu } from "lucide-react";
 import { useState } from "react";
 import MobileNavbar from "./mobiledesign";
 export default function TopNavbar() {
@@ -26,6 +26,9 @@ export default function TopNavbar() {
         </div>
         <div className="bg-white h-10 w-10 flex justify-center items-center rounded-full">
           <span className="text-black font-bold">Ay</span>
+        </div>
+        <div className="hidden md:flex">
+          <LogOut />
         </div>
       </div>
 

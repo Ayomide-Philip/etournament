@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { IoIosFootball } from "react-icons/io";
-import { MdExitToApp } from "react-icons/md";
 import { TbTournament } from "react-icons/tb";
 import {
   Gauge,
