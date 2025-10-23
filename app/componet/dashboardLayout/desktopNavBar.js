@@ -4,7 +4,7 @@ import { TbTournament } from "react-icons/tb";
 
 export default function DesktopNavBar() {
   return (
-    <div className="text-white fixed bottom-5  transform -translate-x-1/2 left-1/2 z-10">
+    <div className="hidden md:flex text-white fixed bottom-5  transform -translate-x-1/2 left-1/2 z-10">
       <div className="bg-gray-800 rounded-xl flex">
         <Link
           href="#"
