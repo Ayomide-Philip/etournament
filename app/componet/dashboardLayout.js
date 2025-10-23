@@ -1,8 +1,9 @@
 import DesktopNavBar from "./dashboardLayout/desktopNavBar";
+import TopNavbar from "./dashboardLayout/topNavBar";
 export default function DashboardLayout() {
   return (
     <>
-      <div className="text-white bg-gray-800 h-20">Hello World</div>
+      <TopNavbar />
       <DesktopNavBar />
     </>
   );
