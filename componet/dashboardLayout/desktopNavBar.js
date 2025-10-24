@@ -3,7 +3,7 @@ import { navLink } from "./navLink";
 
 export default function DesktopNavBar() {
   return (
-    <div className="hidden md:flex text-white fixed bottom-5  transform -translate-x-1/2 left-1/2 z-10">
+    <div className="hidden md:flex text-white fixed bottom-3  transform -translate-x-1/2 left-1/2 z-10">
       <div className="bg-gray-800 rounded-xl flex">
         {navLink.map(({ name, path, icon: Icon }, idx) => {
           return (

@@ -4,8 +4,11 @@ export default function Page() {
   return (
     <>
       <Banner />
-      <div className="flex">
-        <h1>Ongoing Tournaments</h1>
+      <div className="flex p-3">
+        <div className="w-full mb-20">
+          <h1 className="text-white text-2xl capitalize text-center">Ongoing Tournaments</h1>
+        
+        </div>
       </div>
     </>
   );
