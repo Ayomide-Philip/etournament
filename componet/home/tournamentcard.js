@@ -13,7 +13,7 @@ export default function TournamentCard() {
         <div className="absolute -bottom-8 md:-bottom-10 left-1 md:left-3">
           <img
             src="/efootball.jpg"
-            alt=""
+            alt="Profile Picture"
             className=" h-15 w-15 md:h-20 md:w-20 rounded-full object-cover border-2 border-white"
           />
         </div>
