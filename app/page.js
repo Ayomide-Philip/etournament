@@ -10,7 +10,7 @@ export default function Page() {
           <h1 className="text-white text-3xl capitalize text-center mb-4">
             Ongoing Tournaments
           </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 ">
             <TournamentCard />
             <TournamentCard />
             <TournamentCard />
